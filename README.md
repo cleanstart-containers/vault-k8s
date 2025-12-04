@@ -4,7 +4,7 @@ This project provides a CleanStart container image for **Vault-K8s**, a Kubernet
 
 **📌 CleanStart Foundation:** Security-hardened, minimal base OS designed for enterprise containerized environments.
 
-**Image Path:** `cleanstart/vault-k8s`
+**Image Path:** `ghcr.io/cleanstart-containers/vault-k8s`
 
 **Registry:** CleanStart Registry
 
@@ -37,7 +37,7 @@ The Vault-K8s container project is organized into the following structure:
 
 ## Container Image
 
-**Image:** `cleanstart/vault-k8s:latest-dev`
+**Image:** `ghcr.io/cleanstart-containers/vault-k8s:latest-dev`
 
 The container image includes:
 
@@ -85,7 +85,7 @@ Before deploying, ensure you have:
 
 1. **Kubernetes Cluster**: Any Kubernetes cluster (Kind, minikube, k3s, GKE, EKS, AKS, etc.)
 2. **kubectl**: Installed and configured to connect to your cluster
-3. **Image Access**: Ability to pull `cleanstart/vault-k8s:latest-dev` and `hashicorp/vault:latest` images
+3. **Image Access**: Ability to pull `ghcr.io/cleanstart-containers/vault-k8s:latest-dev` and `hashicorp/vault:latest` images
 
 **Note:** The deployment includes a Vault server in dev mode. For production, use the official Vault Helm chart or a proper Vault deployment.
 
@@ -95,15 +95,15 @@ Before deploying, ensure you have:
 
 ### Pull Commands
 ```bash
-docker pull cleanstart/vault-k8s:latest
-docker pull cleanstart/vault-k8s:latest-dev
+docker pull ghcr.io/cleanstart-containers/vault-k8s:latest
+docker pull ghcr.io/cleanstart-containers/vault-k8s:latest-dev
 ```
 
 ### Run Commands
 
 Basic test:
 ```bash
-docker run -it --name vault-k8s-test cleanstart/vault-k8s:latest-dev
+docker run -it --name vault-k8s-test ghcr.io/cleanstart-containers/vault-k8s:latest-dev
 ```
 
 Production deployment:
@@ -112,7 +112,7 @@ docker run -d --name vault-k8s-prod \
   --read-only \
   --security-opt=no-new-privileges \
   --user 1000:1000 \
-  cleanstart/vault-k8s:latest
+  ghcr.io/cleanstart-containers/vault-k8s:latest
 ```
 
 ---
@@ -159,8 +159,8 @@ CleanStart images support multiple architectures to ensure compatibility across 
 
 ### Architecture-based Pull Commands
 ```bash
-docker pull --platform linux/amd64 cleanstart/vault-k8s:latest
-docker pull --platform linux/arm64 cleanstart/vault-k8s:latest
+docker pull --platform linux/amd64 ghcr.io/cleanstart-containers/vault-k8s:latest
+docker pull --platform linux/arm64 ghcr.io/cleanstart-containers/vault-k8s:latest
 ```
 
 ---
