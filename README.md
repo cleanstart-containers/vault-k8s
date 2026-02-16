@@ -184,7 +184,7 @@ The current Kubernetes deployment runs Vault-K8s as an agent injector with a Vau
 - **Vault-K8s GitHub Repository:** https://github.com/hashicorp/vault-k8s
 - **Provenance / SBOM / Signature:** https://images.cleanstart.com/images/vault-k8s
 - **Docker Hub:** https://hub.docker.com/r/cleanstart/vault-k8s
-- **CleanStart All Images:** https://images.cleanstart.com
+- **CleanStart All Images:** https://images.cleanstart.com/images/vault-k8s/details
 - **CleanStart Community Images:** https://hub.docker.com/u/cleanstart
 
 ---
